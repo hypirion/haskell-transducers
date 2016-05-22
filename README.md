@@ -133,6 +133,11 @@ them. See
 [Clojure's Transducers in Haskell](http://hypirion.com/musings/haskell-transducers)
 for more information.
 
+## Real World Production Usage
+
+Use [conduits](https://github.com/snoyberg/conduit) instead. This library will
+(most likely) not be published nor maintained.
+
 ## License
 
 Copyright © 2016 Jean Niklas L'orange
