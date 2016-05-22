@@ -57,7 +57,7 @@ reduce (Reducer is c f) z as
 
 -- TODO: Could we make a Transducer into a Monad to avoid the state? We probably
 -- just reimplement Conduits/Pipes by doing so, so doesn't seem too fruitful.
--- TODO: Possible to ensure t is rigid? We need to be able to refer to t though,
+-- TODO: Possible to ensure s is rigid? We need to be able to refer to t though,
 -- so we cannot omit it?
 type Transducer s t a b = forall r. Reducer s a r -> Reducer t b r
 
