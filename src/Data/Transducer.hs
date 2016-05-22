@@ -55,8 +55,10 @@ reduce (Reducer is c f) z as
   = let (state, res) = reduce' f is z as
     in c state res
 
--- TODO: Possible to ensure t is rigid? Or maybe the state type is necessary
--- here.
+-- TODO: Could we make a Transducer into a Monad to avoid the state? We probably
+-- just reimplement Conduits/Pipes by doing so, so doesn't seem too fruitful.
+-- TODO: Possible to ensure t is rigid? We need to be able to refer to t though,
+-- so we cannot omit it?
 type Transducer s t a b = forall r. Reducer s a r -> Reducer t b r
 
 -- This is terrible, and is only used as an example. Please use Data.Sequence
