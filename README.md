@@ -3,7 +3,7 @@
 Transducers for Haskell. See explanation in my blogpost
 [Clojure's Transducers in Haskell](http://hypirion.com/musings/haskell-transducers).
 
-Transducers is used for stream processing, where the stream type is unknown à
+Transducers are used for stream manipulation, where the stream type is unknown a
 priori: It can be list mapping, reductions, used for Conduits, or for your own
 types or needs. The input and output stream types are decoupled from eachother.
 
